@@ -32,6 +32,7 @@ public class cameraShake : MonoBehaviour
         {
             Vector3 pos = orignalPosition + Random.insideUnitSphere * shakerange;
             pos.z = camTrans.position.z;
+            camTrans.position = pos;
             elapsedTime += Time.deltaTime;
             yield return null;
         }
